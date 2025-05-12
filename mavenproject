@@ -1,0 +1,72 @@
+ECLIPSE IDE
+new
+maven project
+next
+catalog:internal, filter:quickstart
+next
+groupid:isee
+artifact:csee
+finish
+terminal: give Y:Y(type)
+build success
+>csee 
+go to browser
+maven repository
+jcon simple type
+select first one
+scroll down 1.1.1
+copy code
+go to pom.xml
+after 17th line paste
+ctrl+S
+pom.xml right click
+new
+folder
+JSON (caps)
+finish
+pom.xml
+new
+class
+anyname(laa.java)
+go to JSON
+new
+file
+name:demo.json
+paste code 
+
+
+{
+	"firstname":"Disha",
+	"lastname":"Dinesh"
+}
+
+
+save
+go to App.java 
+copy paste code
+
+
+package vvce.ise;
+import java. io. FileReader;
+import java. io. IOException;
+import java. text. ParseException;
+import org. json. simple. JSONObject;
+import org. json. simple.parser. JSONParser;
+
+public class dev {
+public static void main(String [] args) throws IOException, ParseException, org. json. simple.parser. ParseException{
+JSONParser jsonparser=new JSONParser();
+FileReader reader=new FileReader(".\\JSON\\demo.json");
+Object obj=jsonparser.parse(reader);
+JSONObject empjsonobj=(JSONObject)obj;
+String fname=(String)empjsonobj.get("firstname");
+String lname=(String)empjsonobj.get("lastname");
+System.out.println("first name:"+fname);
+System.out.println("last name:"+lname);
+}
+}
+
+
+save
+run
+first name, last name output appears
