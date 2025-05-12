@@ -1,0 +1,4 @@
+docker images
+docker login
+docker tag img1 samarthh23/add-app
+docker push samarthh23/add-app
