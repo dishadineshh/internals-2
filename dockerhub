@@ -44,3 +44,23 @@ CMD ["python","add.py"]
 
 docker build -t img1 .
 docker run img1
+----------------------------------------------------
+docker build -t pic2 .
+docker run pic2
+docker build -t "app" .
+docker images
+docker tag app:latest dishadineshhh/pic2
+docker images
+docker login -u dishadineshhh 
+enter password here
+docker tag app:latest dishadineshhh/pic2
+docker push dishadineshhh/pic2
+docker pull dishadineshhh/pic2
+
+-----------------
+
+public class add {
+    public static void main(String[] args) {
+        System.out.println("The sum is: " + (10 + 20));
+    }
+}
