@@ -55,7 +55,7 @@ login to GitHub
 step 3 scroll down
 copy the link
 choose a repository any
-go to settings
+go to settings ////next to insights-just above main
 webhooks
 payload url paste
 select content type as application/json
