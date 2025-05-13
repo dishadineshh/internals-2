@@ -15,6 +15,37 @@ file name and run commands should be the same alphabets(caps/small) eg: Add/add
 go to docker -> images-> img1-> actions -> run -> run -> output=30
 
 
+add.java
+
+public class add {
+    public static void main(String[] args) {
+        System.out.println("The sum is: " + (10 + 20));
+    }
+}
+
+add.py
+
+a = 10
+b = 20
+print("The sum is:", a + b)
+
+Dockerfile (java)
+
+FROM openjdk
+WORKDIR /app
+COPY . /app
+RUN javac add.java
+CMD ["java","add"]
+
+
+Dockefile (py)
+
+FROM python
+WORKDIR /app
+COPY . /app
+CMD ["python","add.py"]
+
+
 docker build -t pic2 .
 docker run pic2
 docker build -t "app" .
@@ -22,7 +53,9 @@ docker images
 docker tag app:latest dishadineshhh/pic2
 docker images
 docker login -u dishadineshhh 
+
 enter password here
+
 docker tag app:latest dishadineshhh/pic2
 docker push dishadineshhh/pic2
 docker pull dishadineshhh/pic2
