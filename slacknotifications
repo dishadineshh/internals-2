@@ -32,3 +32,34 @@ turn on all boxes
 apply -> save
 build now
 go to slack -> #vvce -> #2 success
+
+
+
+---------------------------------- MODIFICATION---------------------------
+automations
+apps
+search GitHub
+select GitHub enterprise server
+add to slack
+choose channel same as done before #social
+add GitHub integration
+
+login to GitHub
+
+step 3 scroll down
+copy the link
+choose a repository any
+go to settings
+webhooks
+payload url paste
+select content type as application/json
+tick on send me everything
+add webhook
+
+go to the repo (name pakka click on the repo next to it)
+go to 1 branch 
+create new branch
+give a name
+create new branch
+go to clack channel
+you would've got the notification
