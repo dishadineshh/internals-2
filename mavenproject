@@ -70,3 +70,123 @@ System.out.println("last name:"+lname);
 save
 run
 first name, last name output appears
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+new
+switch workspace
+other
+browser
+local disk D
+right click
+new folder (akkk)(any)
+select folder
+launch
+opens in ide
+
+
+new-> maven project 
+tick on first option create a simple project
+next
+groupid:akka(any)
+artifact id:akka(any)
+finish
+tap on akka
+tap on src/main/resources
+new->folder->name:HTML(caps)
+tap on HTML->new->file->demo.html(small)
+copy 
+
+<html>
+  <body>
+    <p>firstname: Lakshmi</p>
+    <p>lastname: Varnika</p>
+  </body>
+</html>
+
+paste and ctrl+S
+
+
+go to pom.xml 
+copy
+
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>maven.lab6</groupId>
+    <artifactId>htmldemo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>htmldemo</name>
+    <url>http://www.example.com</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+    
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.17.2</version>
+        </dependency>
+    </dependencies>
+</project>
+
+paste completely full copy paste
+ctrl+S
+
+go to top akka
+right click->maven->update->update project->OK
+src/main/java->new->package->abc(any)
+abc->new->class->demo.java->OK
+copy
+
+package maven.lab6;
+
+import java.io.InputStream;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+public class demo {
+    public static void main(String[] args) {
+        try (InputStream input = demo.class.getClassLoader().getResourceAsStream("HTML/demo.html")) {
+            if (input == null) {
+                System.out.println("demo.html file not found");
+                return;
+            }
+
+            // Parse HTML file using Jsoup
+            Document doc = Jsoup.parse(input, "UTF-8", "");
+
+            // Extract values
+            String firstname = doc.select("p:contains(firstname)").text().replace("firstname: ", "");
+            String lastname = doc.select("p:contains(lastname)").text().replace("lastname: ", "");
+
+            // Output
+            System.out.println("First name: " + firstname);
+            System.out.println("Last name: " + lastname);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+paste full in demo.java
+
+
+RUN:
+
+right click on demo.java->runas -> java application
