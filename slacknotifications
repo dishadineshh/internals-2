@@ -24,6 +24,12 @@ myvvce paste in workspace
 default channel chage to #vvce if not the same
 test connection ->success -> save ->apply
 
+
+///check workspace should be same as domian
+///in credential select last but 1 secret text
+///add+  kind select secret text and paste from step 3
+///default channel should be same as what u selected
+
 take any runned success programs form Jenkins
 configure
 post build actions
