@@ -1,0 +1,34 @@
+login/signup to slack
+join workspace
+save
+search slack in home(app)
+automations
+apps
+Jenkins CI
+configuration
+add to slack
+#vvce select
+add CI integration
+step 3 se copy secret text
+
+loginto jenkins
+go to manage Jenkins
+system
+check plugin slack installed
+fo down to slack
+credential 
+add+
+king ->secret text
+step 3 paste in secret -> add+
+myvvce paste in workspace
+default channel chage to #vvce if not the same
+test connection ->success -> save ->apply
+
+take any runned success programs form Jenkins
+configure
+post build actions
+slack notifications
+turn on all boxes
+apply -> save
+build now
+go to slack -> #vvce -> #2 success
